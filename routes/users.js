@@ -30,8 +30,8 @@ module.exports =  (app) => {
     });
     
     route.post(
-        body('name', 'Coloque um nome válido').notEmpty(),
-        body('email', 'E-mail inválido').notEmpty().isEmail(),
+        body('_name', 'Coloque um nome válido').notEmpty(),
+        body('_email', 'E-mail inválido').notEmpty().isEmail(),
         (req, res) => { 
 
         let errors = validationResult(req);
@@ -74,8 +74,8 @@ module.exports =  (app) => {
     })
 
     routeId.put(
-        body('name', 'Coloque um nome válido').notEmpty(),
-        body('email', 'E-mail inválido').notEmpty().isEmail(),
+        body('_name', 'Coloque um nome válido').notEmpty(),
+        body('_email', 'E-mail inválido').notEmpty().isEmail(),
         (req, res)=> { 
 
             let errors = validationResult(req);
